@@ -5,6 +5,11 @@ $(document).ready(function() {
       .find("+ .hidden")
       .addClass("content")
   })
+  $(".images").on("click", function(e) {
+    $(this)
+      .addClass("show")
+      .addBack("images")
+  })
 })
 
 let html = carouselImages
@@ -12,7 +17,7 @@ let html = carouselImages
   .map(function(item) {
     return `
   <div class="imageBox">
-    <img class="images covered" src="${item.image_url}" />
+    <img class="images" src="${item.image_url}" />
     <p class="title">${item.title}</p>
     <p class="photographer">${item.photographer_id}</p>
   </div>
